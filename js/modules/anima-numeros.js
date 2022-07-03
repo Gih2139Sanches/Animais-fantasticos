@@ -15,19 +15,18 @@ export default function initAnimaNumeros() {
           clearInterval(timer);
         }
       }, 25 * Math.random());
-      console.log(timer);
     });
   }
-}
 
-function handleMutation(mutation) {
-  if (mutation[0].target.classlist.contains("ativo")) {
-    observer.disconnect();
-    animaNumeros();
+  function handleMutation(mutation) {
+    if (mutation[0].target.classList.contains("ativo")) {
+      observer.disconnect();
+      animaNumeros();
+    }
   }
+
+  const observerTarget = document.querySelector(".numeros");
+  const observer = new MutationObserver(handleMutation);
+
+  observer.observe(observerTarget, { attributes: true });
 }
-
-const observerTarget = document.querySelectorAll(".numeros");
-const observer = new MutationObserver(handleMutation);
-
-observer.observe(observerTarget, { attributes: true });

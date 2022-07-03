@@ -10,8 +10,7 @@ export default function initModal() {
     }
 
     function cliqueForaModal(event) {
-      if (event.target === this) 
-      toggleModal(event);
+      if (event.target === this) toggleModal(event);
     }
 
     botaoAbrir.addEventListener("click", toggleModal);

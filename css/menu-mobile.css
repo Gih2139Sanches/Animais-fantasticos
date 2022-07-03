@@ -44,7 +44,7 @@
   }
   .js [data-menu="list"].active {
     display: block;
-    animation: show-rigth 0.3 forwards;
+    animation: show-rigth 0.3s forwards;
   }
   .js .dropdown-menu {
     position: static;
