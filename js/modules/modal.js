@@ -6,7 +6,7 @@ export default function initModal() {
   if (botaoAbrir && botaoFechar && containerModal) {
     function toggleModal(event) {
       event.preventDefault();
-      containerModal.classList.toogle("ativo");
+      containerModal.classList.toggle("ativo");
     }
 
     function cliqueForaModal(event) {
